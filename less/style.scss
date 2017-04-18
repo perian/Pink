@@ -1,0 +1,63 @@
+@import "normalize.scss";
+@import "mixins.scss";
+@import "variables.scss";
+
+@import "global/fonts.scss";
+@import "global/form.scss";
+
+@import "blocks/btn.scss";
+@import "blocks/pop-up.scss";
+@import "blocks/hidden.scss";
+@import "blocks/intro.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/photo-and-video.scss";
+@import "blocks/photo-post.scss";
+@import "blocks/reason.scss";
+@import "blocks/search-hotel.scss";
+@import "blocks/social-link.scss";
+@import "blocks/social.scss";
+@import "blocks/video-post.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tahoma", sans-serif;
+  min-width: 320px;
+  margin: 0 auto;
+
+  background: $white;
+
+  @include desktop {
+    max-width: 1200px;
+    box-shadow: 0 0 35px -10px;
+  }
+}
+
+.fonts-loaded body {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
