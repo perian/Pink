@@ -1,0 +1,48 @@
+.form {
+  padding-top: 45px;
+  padding-bottom: 25px;
+
+  .font-size(18px, 30px);
+}
+
+.form__intro {
+  margin: 0;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.form__field {
+  padding: 40px 0;
+
+  &:nth-child(2n+1) {
+    background-color: @grey;
+  }
+
+  &--borderless {
+    border: none;
+  }
+}
+
+.form__title {
+  .font-size(14px, 18px);
+  color: @text-red;
+  text-transform: uppercase;
+}
+
+.form__label {
+  padding-left: 20px;
+
+  font-size: 14px;
+
+  color: @text-red;
+  text-transform: uppercase;
+}
+
+.form__input {
+
+}
+
+.form__star {
+  color: @text-red;
+}

@@ -1,0 +1,49 @@
+.promo {
+
+  font-weight: 300;
+  text-align: center;
+
+  color: @title-white;
+  background-color: @blue;
+
+  &--small {
+    height: 237px;
+    background: url(/img/bg-back-mobile@1x.jpg) no-repeat top;
+  }
+}
+
+.promo__background {
+  height: 462px;
+
+  background-image:
+  url(/img/iphone-hand-mobile@1x.png),
+  url(/img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.promo__info {
+  padding: 26px 0 30px;
+}
+
+.promo__header {
+  margin-top: 37px;
+  padding: 0 20px;
+
+  .font-size(24px, 30px);
+  font-weight: 300;
+}
+
+.promo__brand-list {
+  margin: 32px 0 25px;
+  min-height: 55px;
+}
+
+.promo__brand-item {
+  height: 55px;
+  float: left;
+}
+
+.promo__text {
+  .font-size(18px, 24px);
+}

@@ -1,0 +1,39 @@
+.main-nav {
+  .font-size(18px, 32px);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: @menu;
+
+  background-color: @blue;
+}
+
+.main-nav__list-item {
+  padding: 16px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.main-nav__list-link {
+  text-decoration: none;
+
+  color: @white;
+
+  &:hover {
+    color: @menu-hvr;
+  }
+  &:active {
+    color: @menu-down;
+  }
+
+  &--active {
+    border-bottom: 1px solid @white;
+
+    &:hover {
+      border-color: @menu-hvr;
+    }
+    &:active {
+      border-color: @menu-down;
+    }
+  }
+}
