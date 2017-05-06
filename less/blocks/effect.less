@@ -1,5 +1,29 @@
+.effect {
+  padding: 60px 0 30px;
+
+  @media @mobile-width-only {
+    .visibility-hidden();
+  }
+
+  @media @desktop-width {
+    padding-top: 65px;
+
+    background-color: @grey;
+  }
+}
+
+.effect__description {
+  padding-left: 310px;
+
+  .wrapper();
+  @media @desktop-width {
+    padding-left: 370px;
+  }
+}
+
 .effect__research-link {
   color: @link;
+  text-decoration: none;
 }
 
 .effect__title {

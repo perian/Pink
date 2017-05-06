@@ -7,14 +7,14 @@ body {
   margin: 0 auto;
 
   font-family: "Open Sans", "Tahoma", sans-serif;
-  .font-size(14px, 24px);
-
   color: @text-blue;
+
   background: white;
+
+  .font-size(14px, 24px);
 }
 
 img {
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -27,13 +27,22 @@ ul {
   }
 }
 
-// .visually-hidden {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   padding: 0;
-//   overflow: hidden;
-//   border: 0;
-//   clip: rect(0 0 0 0);
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}

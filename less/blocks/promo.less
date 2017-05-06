@@ -1,49 +1,73 @@
 .promo {
+  height: 732px;
 
   font-weight: 300;
   text-align: center;
-
   color: @title-white;
+
   background-color: @blue;
+  background-image: url(/img/iphone-hand-mobile@1x.png),
+  url(/img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center 176px,
+  center top;
+  background-size: auto,contain;
 
   &--small {
     height: 237px;
-    background: url(/img/bg-back-mobile@1x.jpg) no-repeat top;
+  }
+  @media @tablet-width {
+    height: 622px;
+
+    background-position: 90% 101px,
+    center top;
+    background-size: 476px,cover;
+  }
+
+  @media @desktop-width {
+    background-position: 86.170212% 101px,
+    center top;
   }
 }
 
-.promo__background {
-  height: 462px;
-
-  background-image:
-  url(/img/iphone-hand-mobile@1x.png),
-  url(/img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
-
 .promo__info {
-  padding: 26px 0 30px;
+  padding: 487px 0 30px;
+  @media @tablet-width {
+    width: 300px;
+    padding-top: 100px;
+  }
 }
 
 .promo__header {
-  margin-top: 37px;
-  padding: 0 20px;
+  margin-bottom: 35px;
+  padding: 0 40px;
+
+  font-weight: 300;
 
   .font-size(24px, 30px);
-  font-weight: 300;
+
+  @media @mobile-width-only {
+    .visibility-hidden();
+  }
+
+  @media @tablet-width {
+    .font-size(40px, 50px);
+  }
 }
 
 .promo__brand-list {
-  margin: 32px 0 25px;
   min-height: 55px;
+  margin: 32px 0 25px;
 }
 
 .promo__brand-item {
-  height: 55px;
   float: left;
+  height: 55px;
 }
 
 .promo__text {
   .font-size(18px, 24px);
+  @media @mobile-width-only {
+    letter-spacing: -0.5px;
+  }
 }
