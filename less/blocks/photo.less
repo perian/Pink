@@ -1,17 +1,33 @@
 .photo__title {
-  line-height: 30px;
-}
-
-.photo__title {
-  margin: 0;
+  width: 250px;
+  margin: 0 auto;
   padding: 45px 0 52px;
 
+  font-weight: normal;
+  line-height: 30px;
   text-align: center;
+
+  @media @tablet-width {
+    width: 350px;
+  }
+
+  @media @tablet-width {
+    width: 450px;
+  }
 }
 
-// .photo__list {
-//   .wrapper;
-// }
+.photo__list {
+  .clearfix;
+  .wrapper();
+
+  // &--col {
+  //   @media @tablet-width {
+  //     float: left;
+  //     width: 300px;
+  //   }
+  // }
+}
+
 
 .photo__item {
   margin-bottom: 20px;
@@ -57,17 +73,77 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &:nth-child(2n+2) {
+    @media @tablet-width {
+      margin-right: 16px;
+    }
+    @media @desktop-width {
+      margin-right: 0;
+    }
+  }
+
+  &:not(:nth-child(3n+1)) {
+    @media @desktop-width {
+      margin-right: 16px;
+    }
+  }
+
+  &:not(:first-child) {
+    @media @tablet-width {
+      display: inline-block;
+      width: 300px;
+
+      vertical-align: top;
+    }
+  }
+}
+
+.photo__image {
+  width: 280px;
+  height: 180px;
+
+  & img {
+    height: 180px;
+  }
+
+  &--full {
+    width: 100%;
+    height: 136px;
+
+    background-color: #30371f;
+
+    @media @tablet-width {
+      height: 508px;
+    }
+
+    & .label {
+      right: 0;
+
+      @media @tablet-width {
+        top: 57px;
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 136px;
+    }
+  }
 }
 
 .photo__description {
   padding: 18px;
+
+  @media @tablet-width {
+    padding: 24px 27px;
+  }
 }
 
 .photo__author {
-  margin: 0;
-
   font-weight: bold;
 }
+
 .photo__time {
   font-weight: 300;
   font-size: 12px;
@@ -80,26 +156,46 @@
   text-transform: uppercase;
 }
 
-.photo__image {
-  width: 280px;
-  height: 180px;
-
-  &--full {
-    background-color: #30371f;
-  }
-
-  .photo__upload-image {
-    width: 280px;
-    height: 374px;
-
-    background-color: #bbcfe7;
-  }
-}
-
-.photo__upload-wrapper {
+.photo__upload {
   padding-bottom: 40px;
 
   text-align: center;
 
   background-color: @grey;
+}
+
+.photo__upload-wrapper {
+  .wrapper();
+
+  @media @tablet-width {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .clearfix();
+  }
+
+  @media @desktop-width {
+    padding-right: 57px;
+    padding-left: 57px;
+  }
+}
+
+.photo__upload-image {
+  width: 280px;
+  height: 374px;
+
+  background-color: #bbcfe7;
+
+  @media @tablet-width {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+  }
+}
+
+.photo__controls {
+  @media @tablet-width {
+    float: left;
+    width: 300px;
+  }
 }

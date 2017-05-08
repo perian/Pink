@@ -9,14 +9,16 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list  main-nav--closed">
           <li class="main-nav__list-item">
-            <div class="logo">
-              <img src="http://placehold.it/77x23" alt="logo">
+            <div class="main-nav__wrapper">
+              <a class="logo" href="/">
+                <img src="/img/logo-pink-white-mobile.svg" alt="logo">
+              </a>
+              <button class="main-nav__toggle" type="button">Открыть меню</button>
             </div>
           </li>
-          <li class="main-nav__list-item  main-nav__list-item--active">
+          <li class="main-nav__list-item">
             <a class="main-nav__list-link" href="/index.html">Главная</a>
           </li>
           <li class="main-nav__list-item">
@@ -32,12 +34,7 @@
       </nav>
 
       <div class="promo  promo--small">
-        <div class="top-menu">
-          <div class="logo">
-            <img src="http://placehold.it/77x23" alt="logo">
-          </div>
-        </div>
-        <h1 class="promo__header">
+        <h1 class="promo__title">
           Фотографии пользователей
         </h1>
       </div>
@@ -48,11 +45,15 @@
         <h4 class="photo__title">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </h4>
-        <ul class="photo__list">
-          <div class="photo__image  photo__image--full">
+
+        <div class="photo__image  photo__image--full">
+          <div class="wrapper">
             <span class="label">Панорама дня</span>
-            <img src="http://placehold.it/280x180" alt="">
           </div>
+          <img src="http://placehold.it/280x180" alt="View from the top of the bridge">
+        </div>
+
+        <ul class="photo__list">
           <li class="photo__item">
             <div class="photo__description">
               <p class="photo__author">Анна<span class="photo__time">(5 минут назад)</span></p>
@@ -149,19 +150,21 @@
           </li>
         </ul>
 
+        <h4 class="photo__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h4>
         <div class="photo__upload">
-          <h4 class="photo__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h4>
           <div class="photo__upload-wrapper">
             <div class="photo__upload-image">
               <img src="http://placehold.it/280x374" alt="">
             </div>
-            <ul class="photo__effect-list">
-              <li class="photo__effect-item"></li>
-              <li class="photo__effect-item"></li>
-              <li class="photo__effect-item"></li>
-            </ul>
-            <button class="btn  btn--red">Запостить</button>
-            <button class="btn  btn--grey">Отмена</button>
+            <div class="photo__controls">
+              <ul class="photo__controls-list">
+                <li class="photo__controls-item"></li>
+                <li class="photo__controls-item"></li>
+                <li class="photo__controls-item"></li>
+              </ul>
+              <button class="btn  btn--red">Запостить</button>
+              <button class="btn  btn--grey">Отмена</button>
+            </div>
           </div>
         </div>
       </section>

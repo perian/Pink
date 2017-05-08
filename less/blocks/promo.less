@@ -11,11 +11,7 @@
   background-repeat: no-repeat;
   background-position: center 176px,
   center top;
-  background-size: auto,contain;
 
-  &--small {
-    height: 237px;
-  }
   @media @tablet-width {
     height: 622px;
 
@@ -28,6 +24,18 @@
     background-position: 86.170212% 101px,
     center top;
   }
+
+  &--small {
+    height: 237px;
+
+    @media @tablet-width {
+      height: 440px;
+    }
+
+    @media @tablet-width {
+      height: 394px;
+    }
+  }
 }
 
 .promo__info {
@@ -39,19 +47,41 @@
 }
 
 .promo__header {
+  display: block;
+  width: 198px;
+  margin: 0 auto;
   margin-bottom: 35px;
-  padding: 0 40px;
 
   font-weight: 300;
+  text-align: center;
 
-  .font-size(24px, 30px);
+  .font-size(40px, 50px);
 
   @media @mobile-width-only {
     .visibility-hidden();
   }
 
+  @media @desktop-width {
+    .font-size(50px, 60px);
+  }
+}
+
+.promo__title {
+  display: inline-block;
+  width: 198px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  font-weight: 300;
+  text-align: center;
+
+  .font-size(24px, 29px);
+
   @media @tablet-width {
-    .font-size(40px, 50px);
+    width: 400px;
+    margin-top: 190px;
+
+    .font-size(50px, 60px);
   }
 }
 
