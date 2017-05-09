@@ -3,43 +3,172 @@
   padding-bottom: 25px;
 
   .font-size(18px, 30px);
+  .wrapper();
 }
 
 .form__intro {
   margin: 0;
 
+  font-weight: normal;
   font-size: 14px;
   text-align: center;
+
+  &--hidden {
+    @media @mobile {
+      .visibility-hidden();
+    }
+  }
 }
 
 .form__field {
   padding: 40px 0;
 
-  &:nth-child(2n+1) {
-    background-color: @grey;
+  @media @mobile {
+    border: none;
+  }
+
+  @media @tablet {
+    .clearfix();
+    &:not(:first-of-type) {
+      margin-bottom: 60px;
+      padding: 45px 55px;
+    }
   }
 
   &--borderless {
     border: none;
   }
+
+  &--grey-bg {
+    @media @mobile {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -200px;
+        z-index: -1;
+
+        width: 700px;
+        height: 100%;
+
+        background-color: @grey;
+      }
+    }
+  }
 }
 
 .form__title {
+  padding-right: 30px;
+  padding-left: 30px;
+
+  text-align: center;
   color: @text-red;
   text-transform: uppercase;
 
   .font-size(14px, 18px);
+
+  @media @mobile {
+    padding-top: 40px;
+  }
+
+  &--hidden {
+    @media @mobile {
+      width: 230px;
+      padding-top: 40px;
+
+      .visibility-hidden();
+    }
+  }
+}
+
+.form__checkbox {
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  @media @desktop {
+    display: inline-block;
+    float: left;
+    width: 240px;
+
+    vertical-align: top;
+    &:not(:nth-child(3n+1)) {
+      margin-right: 50px;
+    }
+    &:nth-child(4,5) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__contact {
+  @media @tablet {
+    margin-bottom: 35px;
+  }
+
+  @media @desktop {
+    float: left;
+    width: 375px;
+    margin-bottom: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media @desktop {
+      margin-right: 70px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__textarea {
+  width: 100%;
+  padding: 18px 20px;
+
+  outline: none;
+
+  resize: none;
+
+  @media @tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .form__label {
-  padding-left: 20px;
-
   font-size: 14px;
   color: @text-red;
   text-transform: uppercase;
+  @media @mobile {
+    padding-left: 20px;
+  }
 }
 
+.form__input {
+  width: 100%;
+  padding: 22px 20px;
 
+
+  &--name {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @media @tablet {
+      display: inline-block;
+      width: 65%;
+      margin-left: 70px;
+    }
+  }
+}
+
+.form__input-radio {
+  &:not(:last-of-type) {
+    margin-bottom: 35px;
+  }
+}
 
 .form__star {
   color: @text-red;
