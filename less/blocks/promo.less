@@ -1,49 +1,112 @@
 .promo {
+  height: 732px;
+
+  font-weight: 300;
+  text-align: center;
+  color: @title-white;
+
+  background-color: @blue;
+  background-image: url(/img/iphone-hand-mobile@1x.png),
+  url(/img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center 176px,
+  center top;
+
+  @media @tablet {
+    height: 622px;
+
+    background-position: 90% 101px,
+    center top;
+    background-size: 476px,cover;
+  }
+
+  @media @desktop {
+    background-position: 86.170212% 101px,
+    center top;
+  }
+
+  &--small {
+    height: 237px;
+
+    @media @tablet {
+      height: 440px;
+    }
+
+    @media @tablet {
+      height: 394px;
+    }
+  }
+}
+
+.promo__info {
+  padding: 487px 0 30px;
+  @media @tablet {
+    width: 300px;
+    padding-top: 100px;
+  }
+}
+
+.promo__header {
+  display: block;
+  width: 198px;
+  margin: 0 auto;
+  margin-bottom: 35px;
 
   font-weight: 300;
   text-align: center;
 
-  color: @title-white;
-  background-color: @blue;
+  .font-size(40px, 50px);
 
-  &--small {
-    height: 237px;
-    background: url(/img/bg-back-mobile@1x.jpg) no-repeat top;
+  @media @mobile {
+    .visibility-hidden();
+  }
+
+  @media @desktop {
+    width: 250px;
+
+    .font-size(50px, 60px);
   }
 }
 
-.promo__background {
-  height: 462px;
+.promo__title {
+  display: inline-block;
+  width: 198px;
+  margin: 0 auto;
+  margin-top: 100px;
 
-  background-image:
-  url(/img/iphone-hand-mobile@1x.png),
-  url(/img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
-
-.promo__info {
-  padding: 26px 0 30px;
-}
-
-.promo__header {
-  margin-top: 37px;
-  padding: 0 20px;
-
-  .font-size(24px, 30px);
   font-weight: 300;
+  text-align: center;
+
+  .font-size(24px, 29px);
+
+  @media @tablet {
+    width: 400px;
+    margin-top: 190px;
+
+    .font-size(50px, 60px);
+  }
+
+  &--form {
+    @media @tablet {
+      width: 500px;
+      margin-top: 180px;
+    }
+  }
 }
 
 .promo__brand-list {
-  margin: 32px 0 25px;
   min-height: 55px;
+  margin: 32px 0 25px;
 }
 
 .promo__brand-item {
-  height: 55px;
   float: left;
+  height: 55px;
 }
 
 .promo__text {
   .font-size(18px, 24px);
+  @media @mobile {
+    letter-spacing: -0.5px;
+  }
 }

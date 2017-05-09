@@ -9,14 +9,16 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list  main-nav--closed">
           <li class="main-nav__list-item">
-            <div class="logo">
-              <img src="http://placehold.it/77x23" alt="logo">
+            <div class="main-nav__wrapper">
+              <a class="logo" href="/">
+                <img src="/img/logo-pink-white-mobile.svg" alt="logo">
+              </a>
+              <button class="main-nav__toggle" type="button">Открыть меню</button>
             </div>
           </li>
-          <li class="main-nav__list-item  main-nav__list-item--active">
+          <li class="main-nav__list-item">
             <a class="main-nav__list-link  main-nav__list-link--active">Главная</a>
           </li>
           <li class="main-nav__list-item">
@@ -32,25 +34,22 @@
       </nav>
 
       <section class="promo">
-        <div class="top-menu">
-          <div class="logo">
-            <img src="http://placehold.it/77x23" alt="logo">
-          </div>
-        </div>
-
-        <div class="promo__background"></div>
-        <div class="promo__info">
-          <h1 class="promo__header  visually-hidden">
-            Взгляните на жизнь иначе!
-          </h1>
-          <button class="btn">Скачать приложение</button>
-          <ul class="promo__brand-list">
-            <li class="promo__brand-item"><img src="/" alt=""></li>
-            <li class="promo__brand-item"><img src="/" alt=""></li>
-            <li class="promo__brand-item"><img src="/" alt=""></li>
-          </ul>
-          <div class="promo__text">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        <div class="wrapper">
+          <div class="promo__info">
+            <h1 class="promo__header">
+              Взгляните на жизнь иначе!
+            </h1>
+            <div class="promo__wrapper">
+              <button class="btn">Скачать приложение</button>
+              <ul class="promo__brand-list">
+                <li class="promo__brand-item"><img src="/" alt=""></li>
+                <li class="promo__brand-item"><img src="/" alt=""></li>
+                <li class="promo__brand-item"><img src="/" alt=""></li>
+              </ul>
+              <div class="promo__text">
+                Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -58,39 +57,36 @@
 
     <main>
       <section class="info">
-        <h2 class="info__title">Устали от серости мегаполиса?</h2>
-        <h2 class="info__title">Нам есть, что вам предложить!</h2>
-        <ul class="info__list">
-          <li class="info__item">
-            <h4 class="info__item-title">Поднимает настроение</h4>
-            <p class="info__item-text">
-              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-            </p>
-          </li>
-          <li class="info__item">
-            <h4 class="info__item-title">Меняет мир вокруг</h4>
-            <p class="info__item-text">
-              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-            </p>
-          </li>
-          <li class="info__item">
-            <h4 class="info__item-title">Заводит новых друзей</h4>
-            <p class="info__item-text">
-              Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
-            </p>
-          </li>
-        </ul>
+        <div class="wrapper">
+          <h2 class="info__title">Устали от серости мегаполиса?</h2>
+          <h2 class="info__title  info__title--tight">Нам есть, что вам предложить!</h2>
+        </div>
+
+        <div class="info__background">
+          <ul class="info__list">
+            <li class="info__item">
+              <h4 class="info__item-title">Поднимает настроение</h4>
+              <p class="info__item-text">
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              </p>
+            </li>
+            <li class="info__item">
+              <h4 class="info__item-title">Меняет мир вокруг</h4>
+              <p class="info__item-text">
+                Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+              </p>
+            </li>
+            <li class="info__item">
+              <h4 class="info__item-title">Заводит новых друзей</h4>
+              <p class="info__item-text">
+                Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="reviewer">
-        <h4 class="reviewer__name">Николай Петров</h4>
-        <p class="reviewer__info  visually-hidden">25 лет, водитель трамвая</p>
-        <p class="reviewer__comment">
-          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-        </p>
-      </section>
-
-      <section class="effect  visually-hidden">
+      <section class="effect">
         <div class="effect__description">
           <h3 class="effect__title">Эффект на 24 часа!</h3>
           <p class="effect__text">
@@ -103,7 +99,90 @@
         </div>
       </section>
 
-      <section class="price"></section>
+      <section class="reviews  slider">
+        <div class="reviews__list  slider__list">
+          <input class="slider__item" id="review-input-1" type="radio" name="reviews-input" value="reviews-input-1">
+          <input class="slider__item" id="review-input-2" type="radio" name="reviews-input" value="reviews-input-2" checked>
+          <input class="slider__item" id="review-input-3" type="radio" name="reviews-input" value="reviews-input-3">
+          <div class="slider__toggles">
+            <label class="slider__label" for="review-input-1"></label>
+            <label class="slider__label" for="review-input-2"></label>
+            <label class="slider__label" for="review-input-3"></label>
+          </div>
+          <div class="slider__slides">
+            <div class="review__item  slider__item">
+              <h4 class="reviews__name">Николай Петров</h4>
+              <p class="reviews__info">25 лет, водитель трамвая</p>
+              <p class="reviews__comment">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </div>
+            <div class="review__item  slider__item">
+              <h4 class="reviews__name">Николай Петров</h4>
+              <p class="reviews__info">25 лет, водитель трамвая</p>
+              <p class="reviews__comment">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </div>
+            <div class="review__item  slider__item">
+              <h4 class="reviews__name">Николай Петров</h4>
+              <p class="reviews__info">25 лет, водитель трамвая</p>
+              <p class="reviews__comment">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="price  slider">
+        <div class="wrapper">
+          <input class="slider__item" id="price-input-1" type="radio" name="reviews-input" value="reviews-input-1">
+          <input class="slider__item" id="price-input-2" type="radio" name="reviews-input" value="reviews-input-2" checked>
+          <input class="slider__item" id="price-input-3" type="radio" name="reviews-input" value="reviews-input-3">
+          <div class="slider__toggles">
+            <label class="slider__label" for="price-input-1"></label>
+            <label class="slider__label" for="price-input-2"></label>
+            <label class="slider__label" for="price-input-3"></label>
+          </div>
+          <table class="price__table">
+            <tr class="price__row">
+              <th class="price__table-header"></th>
+              <th class="price__table-header">
+                <p class="price__table-title">База</p>
+                <p class="price__table-price">1,99 USD</p>
+              </th>
+              <th class="price__table-header">
+                <span class="label  label--price-hit">Хит</span>
+                <p class="price__table-title">Стандарт</p>
+                <p class="price__table-price">3,99 USD</p>
+              </th>
+              <th class="price__table-header">
+                <p class="price__table-title">Анлим</p>
+                <p class="price__table-price">9,99 USD</p>
+              </th>
+            </tr>
+            <tr class="price__row">
+              <td class="price__col">Розовый фильтр</td>
+              <td class="price__col  price__col--checked">Розовый фильтр</td>
+              <td class="price__col  price__col--checked">Розовый фильтр</td>
+              <td class="price__col  price__col--checked">Розовый фильтр</td>
+            </tr>
+            <tr class="price__row">
+              <td class="price__col">Смайлики</td>
+              <td class="price__col">Смайлики</td>
+              <td class="price__col  price__col--checked">Смайлики</td>
+              <td class="price__col  price__col--checked">Смайлики</td>
+            </tr>
+            <tr class="price__row">
+              <td class="price__col">Комментарии</td>
+              <td class="price__col">Комментарии</td>
+              <td class="price__col  price__col--checked">Комментарии</td>
+              <td class="price__col  price__col--checked">Комментарии</td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
       <section class="contacts">
         <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
@@ -125,5 +204,19 @@
 
       <div class="map"></div>
     </main>
+
+    <footer class="page-footer  page-footer--hidden">
+      <a class="logo" href="/">
+        <img src="/img/logo-pink-blue-mobile.svg" alt="logo">
+      </a>
+      <ul class="social">
+        <li class="social__link  social__link--twitter"></li>
+        <li class="social__link  social__link--facebook"></li>
+        <li class="social__link  social__link--youtube"></li>
+      </ul>
+      <a class="page-footer__copyright" href="htmlacademy.ru">
+        Разработано
+      </a>
+    </footer>
   </body>
 </html>

@@ -1,21 +1,152 @@
 .info {
-  padding: 46px 20px 0;
+  padding-top: 38px;
 
-  text-align: center;
+  @media @tablet {
+    padding-top: 52px;
+  }
 
-  background-color: @grey;
-  background: url(/img/iphone-screen-mobile@1x.png) no-repeat center bottom;
+  @media @desktop {
+    padding-top: 72px;
+  }
 }
 
 .info__title {
-  margin: 0;
+  margin-bottom: 28px;
+
+  font-weight: 300;
+  text-align: center;
 
   .font-size(24px, 30px);
-  font-weight: 300;
+
+  &--tight {
+    @media @tablet {
+      width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+  &:first-child {
+    @media @tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @media @tablet {
+    margin-bottom: 48px;
+  }
+
+  @media @desktop {
+    margin-bottom: 58px;
+  }
+}
+
+.info__background {
+  background-color: @grey;
+}
+
+.info__list {
+  padding-top: 82px;
+  padding-bottom: 290px;
+
+  background-image: url(/img/iphone-screen-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: center 520px;
+
+  .wrapper();
+
+  @media @tablet {
+    padding-top: 72px;
+    padding-bottom: 38px;
+    padding-left: 310px;
+
+    background-position: left top;
+    background-size: 270px;
+  }
+
+  @media @desktop {
+    padding-top: 0;
+    padding-left: 0;
+
+    background-image: none;
+
+    .clearfix();
+  }
+}
+
+.info__item {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+
+  &:last-child {
+    @media @tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @media @tablet {
+    width: 310px;
+  }
+
+  @media @desktop {
+    position: relative;
+
+    float: left;
+    margin-bottom: 0;
+    padding: 0 32px;
+    padding-top: 350px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 3px;
+
+      width: 300px;
+      height: 304px;
+
+      background-image: url(/img/iphone-screen-mobile@1x.png);
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 186px;
+      box-shadow: inset 20px 0 10px -10px #f2f2f2,
+      inset -20px 0 10px -10px #f2f2f2,
+      inset 0 -11px 8px -12px grey;
+    }
+  }
 }
 
 .info__item-title {
-  color: @title-black;
-  .font-size(18px, 24px);
+  margin: 0 auto;
+  margin-bottom: 12px;
+
   font-weight: bold;
+  text-align: center;
+  color: @title-black;
+
+  .font-size(18px, 24px);
+
+  @media @tablet {
+    text-align: left;
+  }
+
+  @media @desktop {
+    position: relative;
+
+    width: 235px;
+
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.info__item-text {
+  text-align: center;
+  @media @tablet {
+    text-align: left;
+  }
+  @media @desktop {
+    font-size: 18px;
+    text-align: center;
+  }
 }

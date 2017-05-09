@@ -1,8 +1,8 @@
 .btn {
   width: 280px;
   height: 56px;
+  padding: 0;
 
-  .font-size(18px, 18px);
   font-weight: bold;
 
   background-color: transparent;
@@ -10,13 +10,17 @@
   border-radius: 30px;
   outline: none;
 
+  .font-size(18px, 18px);
+
   &:hover {
     color: @btn-hvr;
+
     background-color: @btn-bg-white;
   }
 
   &:active {
     color: @btn-down;
+
     background-color: @btn-bg-white;
   }
 
@@ -24,48 +28,57 @@
     margin-bottom: 10px;
 
     color: @red;
+
     border-color: @red;
 
     &:hover {
       color: @white;
+
       background-color: @btn-bg-red;
     }
 
     &:active {
       color: @white-faded;
+
       background-color: @btn-bg-red;
     }
   }
 
   &--grey {
     color: #e3e4e4;
+
     background-color: transparent;
     border-color: #dddfe0;
 
     &:hover {
       color: #c4c6c8;
-      border-color: #b5b9be;
+
       background-color: transparent;
+      border-color: #b5b9be;
     }
 
     &:active {
       color: @white-faded;
+
       background-color: #b5b9be;
     }
   }
 
   &--green {
     color: @white;
+
     background-color: @btn-bg-green;
     border-radius: 0;
 
     &:hover {
       color: @white;
+
       background-color: @btn-bg-green-hvr;
     }
 
     &:active {
       color: @white-faded;
+
       background-color: @btn-bg-green-action;
     }
   }

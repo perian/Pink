@@ -1,0 +1,36 @@
+.reviews {
+  padding-top: 50px;
+
+  line-height: 30px;
+  text-align: center;
+
+  .wrapper();
+  @media @desktop {
+    padding-top: 190px;
+  }
+}
+
+.reviews__name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.reviews__info {
+  @media @mobile {
+    .visibility-hidden();
+  }
+
+  @media @desktop {
+    font-size: 18px;
+  }
+}
+
+.reviews__comment {
+  @media @tablet {
+    font-size: 18px;
+  }
+}
+
+.review__item:nth-child(n+2) {
+  display: none;
+}

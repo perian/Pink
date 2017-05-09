@@ -1,7 +1,18 @@
+.page-footer {
+  padding: 0 35px;
+
+  .wrapper();
+  &--hidden {
+    @media @mobile {
+      .visibility-hidden();
+    }
+  }
+}
+
 .page-footer__copyright {
   padding-top: 38px;
 
   line-height: 18px;
-  text-decoration: none;
   color: @text-blue;
+  text-decoration: none;
 }

@@ -1,17 +1,26 @@
 .photo__title {
-  line-height: 30px;
-}
-
-.photo__title {
-  margin: 0;
+  width: 250px;
+  margin: 0 auto;
   padding: 45px 0 52px;
 
+  font-weight: normal;
+  line-height: 30px;
   text-align: center;
+
+  @media @tablet {
+    width: 350px;
+  }
+
+  @media @tablet {
+    width: 450px;
+  }
 }
 
-// .photo__list {
-//   .wrapper;
-// }
+.photo__list {
+  .clearfix;
+  .wrapper();
+}
+
 
 .photo__item {
   margin-bottom: 20px;
@@ -57,22 +66,82 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &:nth-child(2n+2) {
+    @media @tablet {
+      margin-right: 16px;
+    }
+    @media @desktop {
+      margin-right: 0;
+    }
+  }
+
+  &:not(:nth-child(3n+1)) {
+    @media @desktop {
+      margin-right: 16px;
+    }
+  }
+
+  &:not(:first-child) {
+    @media @tablet {
+      display: inline-block;
+      width: 300px;
+
+      vertical-align: top;
+    }
+  }
+}
+
+.photo__image {
+  width: 280px;
+  height: 180px;
+
+  & img {
+    height: 180px;
+  }
+
+  &--full {
+    width: 100%;
+    height: 136px;
+
+    background-color: #30371f;
+
+    @media @tablet {
+      height: 508px;
+    }
+
+    & .label {
+      right: 0;
+
+      @media @tablet {
+        top: 57px;
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 136px;
+    }
+  }
 }
 
 .photo__description {
   padding: 18px;
+
+  @media @tablet {
+    padding: 24px 27px;
+  }
 }
 
 .photo__author {
-  margin: 0;
-
   font-weight: bold;
 }
+
 .photo__time {
-  font-size: 12px;
   font-weight: 300;
-  text-transform: uppercase;
+  font-size: 12px;
   color: @text-blue-faded;
+  text-transform: uppercase;
 }
 
 .photo__like-amount {
@@ -80,23 +149,45 @@
   text-transform: uppercase;
 }
 
-.photo__image {
-  width: 280px;
-  height: 180px;
+.photo__upload {
+  padding-bottom: 40px;
 
-  &--full {
-    background-color: #30371f;
-  }
+  text-align: center;
 
-  .photo__upload-image {
-    width: 280px;
-    height: 374px;
-    background-color: #bbcfe7;
-  }
+  background-color: @grey;
 }
 
 .photo__upload-wrapper {
-  padding-bottom: 40px;
-  text-align: center;
-  background-color: @grey;
+  .wrapper();
+
+  @media @tablet {
+    padding-bottom: 80px;
+
+    .clearfix();
+  }
+
+  @media @desktop {
+    padding-right: 57px;
+    padding-left: 57px;
+  }
+}
+
+.photo__upload-image {
+  width: 280px;
+  height: 374px;
+
+  background-color: #bbcfe7;
+
+  @media @tablet {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+  }
+}
+
+.photo__controls {
+  @media @tablet {
+    float: left;
+    width: 300px;
+  }
 }
