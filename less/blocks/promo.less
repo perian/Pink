@@ -6,6 +6,7 @@
   text-align: center;
   color: @title-white;
 
+  background-color: @blue;
   background-image: url(/img/iphone-hand-mobile@1x.png), url(/img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center 176px, center top;
@@ -94,18 +95,23 @@
 }
 
 .promo__brand-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   min-height: 55px;
   margin: 32px 0 25px;
 }
 
 .promo__brand-item {
-  float: left;
+  display: block;
   height: 55px;
 }
 
 .promo__text {
-  .font-size(18px, 24px);
-  @media @mobile {
+  .font-size(14px, 24px);
+
+  @media @tablet {
+    font-size: 18px;
     letter-spacing: -0.5px;
   }
 }

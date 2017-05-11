@@ -8,6 +8,15 @@
   text-transform: uppercase;
 
   background-color: @grey;
+  background-image: url(/img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.price .slider__toggles {
+  @media @tablet {
+    display: none;
+  }
 }
 
 .price__table {
@@ -58,6 +67,9 @@
   text-transform: none;
 
   background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 230px;
   border: 2px solid #e5e5e5;
 
   @media @tablet {
@@ -72,5 +84,13 @@
 
   @media @desktop {
     font-size: 18px;
+  }
+
+  &--unchecked {
+    background-image: url(/img/icon-no.svg);
+  }
+
+  &--checked {
+    background-image: url(/img/icon-yes.svg);
   }
 }
