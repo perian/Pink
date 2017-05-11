@@ -8,16 +8,19 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <ul class="main-nav__list  main-nav--closed">
-          <li class="main-nav__list-item">
-            <div class="main-nav__wrapper">
+      <nav class="main-nav  main-nav--opened  main-nav--nojs">
+        <div class="main-nav__visible-row">
+          <div class="main-nav__wrapper">
+            <div class="main-nav__logo">
               <a class="logo" href="/">
                 <img src="/img/logo-pink-white-mobile.svg" alt="logo">
               </a>
-              <button class="main-nav__toggle" type="button">Открыть меню</button>
             </div>
-          </li>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+        </div>
+
+        <ul class="main-nav__list">
           <li class="main-nav__list-item">
             <a class="main-nav__list-link  main-nav__list-link--active">Главная</a>
           </li>
@@ -32,7 +35,9 @@
           </li>
         </ul>
       </nav>
+    </header>
 
+    <main>
       <section class="promo">
         <div class="wrapper">
           <div class="promo__info">
@@ -53,9 +58,7 @@
           </div>
         </div>
       </section>
-    </header>
 
-    <main>
       <section class="info">
         <div class="wrapper">
           <h2 class="info__title">Устали от серости мегаполиса?</h2>
@@ -218,5 +221,24 @@
         Разработано
       </a>
     </footer>
+
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+
+      navMain.classList.remove("main-nav--nojs");
+      navMain.classList.remove("main-nav--opened");
+      navMain.classList.add("main-nav--closed");
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>

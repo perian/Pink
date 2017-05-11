@@ -1,16 +1,14 @@
 .promo {
   height: 732px;
+  margin-top: -55px;
 
   font-weight: 300;
   text-align: center;
   color: @title-white;
 
-  background-color: @blue;
-  background-image: url(/img/iphone-hand-mobile@1x.png),
-  url(/img/bg-back-mobile@1x.jpg);
+  background-image: url(/img/iphone-hand-mobile@1x.png), url(/img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: center 176px,
-  center top;
+  background-position: center 176px, center top;
 
   @media @tablet {
     height: 622px;
@@ -21,8 +19,9 @@
   }
 
   @media @desktop {
-    background-position: 86.170212% 101px,
-    center top;
+    margin-top: -64px;
+
+    background-position: 86.170212% 101px, center top;
   }
 
   &--small {
