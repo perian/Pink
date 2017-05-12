@@ -8,16 +8,19 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <ul class="main-nav__list  main-nav--closed">
-          <li class="main-nav__list-item">
-            <div class="main-nav__wrapper">
+      <nav class="main-nav  main-nav--opened  main-nav--nojs">
+        <div class="main-nav__visible-row">
+          <div class="main-nav__wrapper">
+            <div class="main-nav__logo">
               <a class="logo" href="/">
                 <img src="/img/logo-pink-white-mobile.svg" alt="logo">
               </a>
-              <button class="main-nav__toggle" type="button">Открыть меню</button>
             </div>
-          </li>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+        </div>
+
+        <ul class="main-nav__list">
           <li class="main-nav__list-item">
             <a class="main-nav__list-link" href="/index.html">Главная</a>
           </li>
@@ -33,14 +36,15 @@
         </ul>
       </nav>
 
+    </header>
+
+    <main>
       <div class="promo  promo--small">
         <h1 class="promo__title">
           Фотографии пользователей
         </h1>
       </div>
-    </header>
 
-    <main>
       <section class="photo">
         <h4 class="photo__title">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
@@ -157,21 +161,33 @@
               <img src="http://placehold.it/280x374" alt="">
             </div>
             <div class="photo__controls">
-              <ul class="photo__controls-list">
-                <li class="photo__controls-item"></li>
-                <li class="photo__controls-item"></li>
-                <li class="photo__controls-item"></li>
-              </ul>
-              <button class="btn  btn--red">Запостить</button>
-              <button class="btn  btn--grey">Отмена</button>
+              <div class="photo__filters">
+                <div class="photo__filter"></div>
+                <div class="photo__filter"></div>
+                <div class="photo__filter"></div>
+              </div>
+              <div class="photo__progress-bars">
+                <div class="photo__progress-bar">
+                  <div class="photo__progress-slider"></div>
+                </div>
+                <div class="photo__progress-bar">
+                  <div class="photo__progress-slider"></div>
+                </div>
+                <div class="photo__progress-bar">
+                  <div class="photo__progress-slider"></div>
+                </div>
+              </div>
+              <button class="photo__btn  btn  btn--red">Запостить</button>
+              <button class="photo__btn  btn  btn--grey">Отмена</button>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="page-footer  page-footer--hidden">
-      <a class="logo" href="/">
+    <footer class="page-footer">
+
+      <a class="logo  page-footer__logo" href="/">
         <img src="/img/logo-pink-blue-mobile.svg" alt="logo">
       </a>
       <ul class="social">
@@ -180,8 +196,28 @@
         <li class="social__link  social__link--youtube"></li>
       </ul>
       <a class="page-footer__copyright" href="htmlacademy.ru">
-        Разработано
+        <p>Разработано</p>
+        <img src="/img/logo-htmlacademy.svg" alt="">
       </a>
     </footer>
+
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+
+      navMain.classList.remove("main-nav--nojs");
+      navMain.classList.remove("main-nav--opened");
+      navMain.classList.add("main-nav--closed");
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>
