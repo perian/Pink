@@ -317,13 +317,17 @@
 
 .photo__btn {
   margin-top: auto;
+
+  @media @tablet {
+    width: 180px;
+  }
 }
 
 .photo__btn:first-of-type {
   margin-bottom: 12px;
 
   @media @tablet {
-    @margin-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   @media @desktop {
