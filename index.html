@@ -8,31 +8,59 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <ul class="main-nav__list  main-nav--closed">
-          <li class="main-nav__list-item">
-            <div class="main-nav__wrapper">
+      <!--
+        Классы переключающие состояния меню
+        и внешний вид кнопки:
+        main-nav--closed
+        main-nav--opened
+        main-nav--nojs
+      -->
+      <nav class="main-nav  main-nav--opened  main-nav--nojs">
+        <div class="main-nav__visible-row">
+          <div class="main-nav__wrapper">
+            <div class="main-nav__logo">
               <a class="logo" href="/">
                 <img src="/img/logo-pink-white-mobile.svg" alt="logo">
               </a>
-              <button class="main-nav__toggle" type="button">Открыть меню</button>
             </div>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+        </div>
+
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link  main-nav__list-link--active">
+              <span class="main-nav__link-text">
+                Главная
+              </span>
+            </a>
           </li>
           <li class="main-nav__list-item">
-            <a class="main-nav__list-link  main-nav__list-link--active">Главная</a>
+            <a class="main-nav__list-link" href="/photo.html">
+              <span class="main-nav__link-text">
+                Фотографии
+              </span>
+            </a>
           </li>
           <li class="main-nav__list-item">
-            <a class="main-nav__list-link" href="/photo.html">Фотографии</a>
+            <a class="main-nav__list-link" href="/form.html">
+              <span class="main-nav__link-text">
+                Конкурс
+              </span>
+            </a>
           </li>
           <li class="main-nav__list-item">
-            <a class="main-nav__list-link" href="/form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a class="main-nav__list-link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="main-nav__list-link" href="https://htmlacademy.ru/">
+              <span class="main-nav__link-text">
+                HTML Academy
+              </span>
+            </a>
           </li>
         </ul>
       </nav>
+    </header>
 
+    <main>
       <section class="promo">
         <div class="wrapper">
           <div class="promo__info">
@@ -41,11 +69,11 @@
             </h1>
             <div class="promo__wrapper">
               <button class="btn">Скачать приложение</button>
-              <ul class="promo__brand-list">
-                <li class="promo__brand-item"><img src="/" alt=""></li>
-                <li class="promo__brand-item"><img src="/" alt=""></li>
-                <li class="promo__brand-item"><img src="/" alt=""></li>
-              </ul>
+              <div class="promo__brand-list">
+                <img class="promo__brand-item" src="/img/logo-apple.svg" alt="">
+                <img class="promo__brand-item" src="/img/logo-android.svg" alt="">
+                <img class="promo__brand-item" src="/img/logo-microsoft.svg" alt="">
+              </div>
               <div class="promo__text">
                 Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
               </div>
@@ -53,9 +81,7 @@
           </div>
         </div>
       </section>
-    </header>
 
-    <main>
       <section class="info">
         <div class="wrapper">
           <h2 class="info__title">Устали от серости мегаполиса?</h2>
@@ -87,48 +113,51 @@
       </section>
 
       <section class="effect">
-        <div class="effect__description">
-          <h3 class="effect__title">Эффект на 24 часа!</h3>
-          <p class="effect__text">
-            Британские ученые провели исследования
-            и доказали, что положительный эффект
-            от использования приложения длится
-            целые сутки!
-          </p>
-          <a href="/" class="effect__research-link">Узнать больше об исследовании</a>
+        <div class="wrapper">
+          <img class="effect__diagram" src="/img/icon-editor-diagram-fill.svg" alt="">
+          <div class="effect__description">
+            <h3 class="effect__title">Эффект<br> на 24 часа!</h3>
+            <p class="effect__text">
+              Британские ученые провели исследования
+              и доказали, что положительный эффект
+              от использования приложения длится
+              целые сутки!
+            </p>
+            <a href="/" class="effect__research-link">Узнать больше об исследовании</a>
+          </div>
         </div>
       </section>
 
       <section class="reviews  slider">
         <div class="reviews__list  slider__list">
-          <input class="slider__item" id="review-input-1" type="radio" name="reviews-input" value="reviews-input-1">
-          <input class="slider__item" id="review-input-2" type="radio" name="reviews-input" value="reviews-input-2" checked>
-          <input class="slider__item" id="review-input-3" type="radio" name="reviews-input" value="reviews-input-3">
+          <input class="slider__input" id="reviews-input-1" type="radio" name="reviews-input" value="reviews-input-1" checked>
+          <input class="slider__input" id="reviews-input-2" type="radio" name="reviews-input" value="reviews-input-2">
+          <input class="slider__input" id="reviews-input-3" type="radio" name="reviews-input" value="reviews-input-3">
           <div class="slider__toggles">
-            <label class="slider__label" for="review-input-1"></label>
-            <label class="slider__label" for="review-input-2"></label>
-            <label class="slider__label" for="review-input-3"></label>
+            <label class="slider__label" for="reviews-input-1"  tabindex="0"></label>
+            <label class="slider__label" for="reviews-input-2"  tabindex="0"></label>
+            <label class="slider__label" for="reviews-input-3"  tabindex="0"></label>
           </div>
           <div class="slider__slides">
             <div class="review__item  slider__item">
               <h4 class="reviews__name">Николай Петров</h4>
               <p class="reviews__info">25 лет, водитель трамвая</p>
               <p class="reviews__comment">
-                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
               </p>
             </div>
             <div class="review__item  slider__item">
               <h4 class="reviews__name">Николай Петров</h4>
               <p class="reviews__info">25 лет, водитель трамвая</p>
               <p class="reviews__comment">
-                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
               </p>
             </div>
             <div class="review__item  slider__item">
               <h4 class="reviews__name">Николай Петров</h4>
               <p class="reviews__info">25 лет, водитель трамвая</p>
               <p class="reviews__comment">
-                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
               </p>
             </div>
           </div>
@@ -137,50 +166,52 @@
 
       <section class="price  slider">
         <div class="wrapper">
-          <input class="slider__item" id="price-input-1" type="radio" name="reviews-input" value="reviews-input-1">
-          <input class="slider__item" id="price-input-2" type="radio" name="reviews-input" value="reviews-input-2" checked>
-          <input class="slider__item" id="price-input-3" type="radio" name="reviews-input" value="reviews-input-3">
-          <div class="slider__toggles">
-            <label class="slider__label" for="price-input-1"></label>
-            <label class="slider__label" for="price-input-2"></label>
-            <label class="slider__label" for="price-input-3"></label>
+          <div class="price__list  slider__list">
+            <input class="slider__input" id="price-input-1" type="radio" name="price-input" value="price-input-1">
+            <input class="slider__input" id="price-input-2" type="radio" name="price-input" value="price-input-2" checked>
+            <input class="slider__input" id="price-input-3" type="radio" name="price-input" value="price-input-3">
+            <div class="slider__toggles">
+              <label class="slider__label" for="price-input-1"></label>
+              <label class="slider__label" for="price-input-2"></label>
+              <label class="slider__label" for="price-input-3"></label>
+            </div>
+            <table class="price__table">
+              <tr class="price__row">
+                <th class="price__table-header"></th>
+                <th class="price__table-header">
+                  <p class="price__table-title">База</p>
+                  <p class="price__table-price">1,99 USD</p>
+                </th>
+                <th class="price__table-header">
+                  <span class="label  label--price-hit">Хит</span>
+                  <p class="price__table-title">Стандарт</p>
+                  <p class="price__table-price">3,99 USD</p>
+                </th>
+                <th class="price__table-header">
+                  <p class="price__table-title">Анлим</p>
+                  <p class="price__table-price">9,99 USD</p>
+                </th>
+              </tr>
+              <tr class="price__row">
+                <td class="price__col">Розовый фильтр</td>
+                <td class="price__col  price__col--checked">Розовый фильтр</td>
+                <td class="price__col  price__col--checked">Розовый фильтр</td>
+                <td class="price__col  price__col--checked">Розовый фильтр</td>
+              </tr>
+              <tr class="price__row">
+                <td class="price__col">Смайлики</td>
+                <td class="price__col  price__col--unchecked">Смайлики</td>
+                <td class="price__col  price__col--checked">Смайлики</td>
+                <td class="price__col  price__col--checked">Смайлики</td>
+              </tr>
+              <tr class="price__row">
+                <td class="price__col">Комментарии</td>
+                <td class="price__col  price__col--unchecked">Комментарии</td>
+                <td class="price__col  price__col--unchecked">Комментарии</td>
+                <td class="price__col  price__col--checked">Комментарии</td>
+              </tr>
+            </table>
           </div>
-          <table class="price__table">
-            <tr class="price__row">
-              <th class="price__table-header"></th>
-              <th class="price__table-header">
-                <p class="price__table-title">База</p>
-                <p class="price__table-price">1,99 USD</p>
-              </th>
-              <th class="price__table-header">
-                <span class="label  label--price-hit">Хит</span>
-                <p class="price__table-title">Стандарт</p>
-                <p class="price__table-price">3,99 USD</p>
-              </th>
-              <th class="price__table-header">
-                <p class="price__table-title">Анлим</p>
-                <p class="price__table-price">9,99 USD</p>
-              </th>
-            </tr>
-            <tr class="price__row">
-              <td class="price__col">Розовый фильтр</td>
-              <td class="price__col  price__col--checked">Розовый фильтр</td>
-              <td class="price__col  price__col--checked">Розовый фильтр</td>
-              <td class="price__col  price__col--checked">Розовый фильтр</td>
-            </tr>
-            <tr class="price__row">
-              <td class="price__col">Смайлики</td>
-              <td class="price__col">Смайлики</td>
-              <td class="price__col  price__col--checked">Смайлики</td>
-              <td class="price__col  price__col--checked">Смайлики</td>
-            </tr>
-            <tr class="price__row">
-              <td class="price__col">Комментарии</td>
-              <td class="price__col">Комментарии</td>
-              <td class="price__col  price__col--checked">Комментарии</td>
-              <td class="price__col  price__col--checked">Комментарии</td>
-            </tr>
-          </table>
         </div>
       </section>
 
@@ -206,7 +237,8 @@
     </main>
 
     <footer class="page-footer  page-footer--hidden">
-      <a class="logo" href="/">
+
+      <a class="logo  page-footer__logo" href="/">
         <img src="/img/logo-pink-blue-mobile.svg" alt="logo">
       </a>
       <ul class="social">
@@ -215,8 +247,28 @@
         <li class="social__link  social__link--youtube"></li>
       </ul>
       <a class="page-footer__copyright" href="htmlacademy.ru">
-        Разработано
+        <p>Разработано</p>
+        <img src="/img/logo-htmlacademy.svg" alt="">
       </a>
     </footer>
+
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+
+      navMain.classList.remove("main-nav--nojs");
+      navMain.classList.remove("main-nav--opened");
+      navMain.classList.add("main-nav--closed");
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>

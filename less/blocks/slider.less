@@ -1,0 +1,92 @@
+.slider__input {
+  display: none;
+}
+
+.slider__toggles {
+  order: 1;
+  margin-top: 23px;
+
+  text-align: center;
+}
+
+.slider__label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+
+  vertical-align: middle;
+
+  background: #b5b9be;
+  background-clip: content-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #7e868f;
+
+    @media @desktop {
+      background-color: transparent;
+      outline: none;
+    }
+  }
+
+  &:active {
+    background-color: #e9ebec;
+
+    @media @desktop {
+      background-color: transparent;
+    }
+  }
+
+  @media @desktop {
+    position: absolute;
+    top: 33px;
+    left: 5px;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+
+    background: transparent;
+    border-color: grey;
+    border-top: none;
+    border-right: none;
+    border-radius: 0;
+    transform: rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    @media @desktop {
+      left: 96%;
+
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:nth-child(2) ~ .slider__label {
+    @media @desktop {
+      display: none;
+    }
+  }
+}
+
+#price-input-1:checked ~ .slider__toggles label[for="price-input-1"],
+#price-input-2:checked ~ .slider__toggles label[for="price-input-2"],
+#price-input-3:checked ~ .slider__toggles label[for="price-input-3"],
+#reviews-input-1:checked ~ .slider__toggles label[for="reviews-input-1"],
+#reviews-input-2:checked ~ .slider__toggles label[for="reviews-input-2"],
+#reviews-input-3:checked ~ .slider__toggles label[for="reviews-input-3"] {
+  background-color: transparent;
+  border: 3px solid @black;
+}
+
+#reviews-input-1:checked ~ .slider__toggles label[for="reviews-input-1"],
+#reviews-input-2:checked ~ .slider__toggles label[for="reviews-input-2"] {
+  @media @desktop {
+    border-top: none;
+    border-right: none;
+  }
+}

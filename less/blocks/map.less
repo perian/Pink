@@ -1,7 +1,16 @@
 .map {
   height: 200px;
 
-  background-image: url(/img/bg-map-mobile@1x.png);
+  background-image: url(/img/bg-triangle-white-footer.svg), url(/img/bg-map-mobile@1x.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: top center, center;
+  background-size: contain, cover;
+
+  @media @tablet {
+    height: 378px;
+  }
+
+  @media @desktop {
+    height: 502px;
+  }
 }
