@@ -18,10 +18,28 @@
 
   .font-size(24px, 30px);
 
+  @media @tablet {
+    margin-bottom: 48px;
+
+    .font-size(40px, 48px);
+  }
+
+  @media @desktop {
+    margin-bottom: 58px;
+
+    .font-size(50px, 58px);
+  }
+
   &--tight {
     @media @tablet {
-      width: 320px;
+      width: 335px;
       margin: 0 auto;
+      margin-bottom: 48px;
+    }
+
+    @media @desktop {
+      width: 425px;
+      margin-bottom: 78px;
     }
   }
 
@@ -29,14 +47,6 @@
     @media @tablet {
       margin-bottom: 0;
     }
-  }
-
-  @media @tablet {
-    margin-bottom: 48px;
-  }
-
-  @media @desktop {
-    margin-bottom: 58px;
   }
 }
 
@@ -49,11 +59,11 @@
 
 .info__list {
   padding-top: 82px;
-  padding-bottom: 290px;
+  padding-bottom: 277px;
 
   background-image: url(/img/iphone-screen-mobile@1x.png);
   background-repeat: no-repeat;
-  background-position: center 520px;
+  background-position: center 510px;
 
   .wrapper();
 
@@ -95,7 +105,7 @@
 
     width: 246px;
     margin-bottom: 0;
-    padding-top: 350px;
+    padding-top: 356px;
 
     &::before {
       content: "";
@@ -104,7 +114,7 @@
       left: 3px;
 
       width: 246px;
-      height: 304px;
+      height: 302px;
 
       background-image: url(/img/iphone-screen-mobile@1x.png);
       background-repeat: no-repeat;
@@ -135,9 +145,11 @@
     position: relative;
 
     width: 235px;
+    margin-bottom: 27px;
 
-    font-size: 30px;
     text-align: center;
+
+    .font-size(30px, 30px);
   }
 }
 
@@ -147,7 +159,8 @@
     text-align: left;
   }
   @media @desktop {
-    font-size: 18px;
     text-align: center;
+
+    .font-size(18px, 30px);
   }
 }

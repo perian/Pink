@@ -1,5 +1,6 @@
 .effect {
-  padding: 60px 0 30px;
+  padding-top: 60px;
+  padding-bottom: 30px;
 
   font-size: 0;
 
@@ -9,6 +10,7 @@
 
   @media @desktop {
     padding-top: 65px;
+    padding-bottom: 90px;
 
     background-color: @grey;
   }
@@ -37,7 +39,14 @@
 
   @media @desktop {
     width: 570px;
+    padding-top: 50px;
+
+    .font-size(18px, 30px);
   }
+}
+
+.effect__title {
+  .font-size(30px, 36px);
 }
 
 .effect__title br {
@@ -46,18 +55,30 @@
   }
 }
 
-.effect__research-link {
-  color: @link;
-}
-
-.effect__title {
-  .font-size(30px, 36px);
-}
-
 .effect__text {
   width: 305px;
 
+  @media @tablet {
+    margin-top: 7px;
+    margin-bottom: 10px;
+  }
+
   @media @desktop {
-    width: 430px;
+    width: 525px;
+    margin-top: 22px;
+    margin-bottom: 32px;
+  }
+}
+
+.effect__research-link {
+  color: @link;
+  &:hover,
+  &:focus {
+    color: @link-hvr;
+  }
+
+  &:active {
+    color: @link-down;
+    text-decoration: none;
   }
 }

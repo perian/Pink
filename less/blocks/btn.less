@@ -1,7 +1,7 @@
 .btn {
-  max-width: 300px;
+  width: 280px;
   height: 56px;
-  padding: 0;
+  padding: 15px;
 
   font-weight: bold;
 
@@ -12,13 +12,9 @@
 
   .font-size(18px, 18px);
 
-  // @media @tablet {
-  //   width: 260px;
-  // }
-  //
-  // @media @desktop {
-  //   width: 300px;
-  // }
+  @media @tablet {
+    width: 300px;
+  }
 
   &:hover {
     color: @btn-hvr;
@@ -32,10 +28,26 @@
     background-color: @btn-bg-white;
   }
 
+  &--red,
+  &--grey {
+    @media @tablet {
+      width: 260px;
+    }
+
+    @media @desktop {
+      width: 184px;
+      margin-top: auto;
+    }
+  }
+
   &--red {
     color: @red;
 
     border-color: @red;
+
+    @media @desktop {
+      margin-right: 42px;
+    }
 
     &:hover {
       color: @white;
@@ -51,6 +63,8 @@
   }
 
   &--grey {
+    margin-top: 12px;
+
     color: #e3e4e4;
 
     background-color: transparent;
@@ -68,10 +82,17 @@
 
       background-color: #b5b9be;
     }
+
+    @media @tablet {
+      margin-top: auto;
+    }
   }
 
   &--green {
+    height: 70px;
+
     color: @white;
+    text-transform: uppercase;
 
     background-color: @btn-bg-green;
     border-radius: 0;
@@ -86,6 +107,10 @@
       color: @white-faded;
 
       background-color: @btn-bg-green-action;
+    }
+
+    &:disabled {
+      background-color: @grey;
     }
   }
 }
