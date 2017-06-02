@@ -49,6 +49,8 @@
   margin: 0;
   padding: 0;
 
+  .form-border-style;
+
   @media @mobile {
     border: none;
   }
@@ -62,6 +64,10 @@
   margin-top: 35px;
 
   border: none;
+
+  @media @mobile {
+    margin-bottom: 46px;
+  }
 
   @media @tablet {
     margin-top: 73px;
@@ -120,13 +126,17 @@
   padding: 16px 20px;
 
   font-size: 18px;
-  &:hover,
-  &:focus {
-    outline-color: @blue;
+
+  outline: none;
+
+  .form-border-style;
+
+  &:hover {
+    border-color: @blue;
   }
 
-  &:active {
-    outline-color: @red;
+  &:focus {
+    border-color: @red;
   }
 }
 
@@ -192,12 +202,14 @@
   @media @tablet {
     padding-top: 44px;
   }
+
   @media @desktop {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    min-height: 222px;
+    height: 218px;
     padding-bottom: 56px;
   }
 }
@@ -231,11 +243,6 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
-    &:nth-of-type(1),
-    &:nth-of-type(3),
-    &:nth-of-type(5) {
-      order: -1;
-    }
   }
 }
 
@@ -263,8 +270,8 @@
     height: 38px;
 
     background-color: white;
-    border: 2px solid #e5e5e5;
-    border-radius: 2px;
+
+    .form-border-style;
   }
 
   &::after {
@@ -336,6 +343,8 @@ input[type="checkbox"]:checked + .form__label-checkbox {
 }
 
 .form__contacts-item {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
 
@@ -366,9 +375,29 @@ input[type="checkbox"]:checked + .form__label-checkbox {
 }
 
 .form__icon {
-  width: 60px;
+  position: absolute;
+  top: 37px;
+  right: 2px;
 
-  background-color: @grey;
+  width: 58px;
+  height: 56px;
+
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+
+  @media @tablet {
+    top: 2px;
+  }
+
+  &--phone {
+    background-image: url("/img/icon-phone.svg");
+  }
+
+  &--mail {
+    background-image: url("/img/icon-mail.svg");
+  }
 }
 
 .form__application {
@@ -422,6 +451,8 @@ input[type="checkbox"]:checked + .form__label-checkbox {
 
   resize: none;
 
+  .form-border-style;
+
   @media @tablet {
     height: 190px;
     padding-top: 15px;
@@ -462,7 +493,7 @@ input[type="checkbox"]:checked + .form__label-checkbox {
   &--hidden {
     display: none;
     @media @desktop {
-      display: inline-block;
+      display: inline;
     }
   }
 }

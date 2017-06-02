@@ -22,8 +22,8 @@
   border-bottom: 1px solid black;
 
   @media @tablet {
-    padding-top: 44px;
-    padding-bottom: 44px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   @media @desktop {
@@ -46,6 +46,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media @tablet {
+    top: 0;
+  }
 
   @media @desktop {
     display: none;
@@ -135,6 +139,10 @@
 .main-nav__toggle:focus::after,
 .main-nav__toggle:focus::before {
   background-color: @red;
+}
+
+.main-nav.main-nav--nojs {
+  position: relative;
 }
 
 .main-nav--nojs .main-nav__toggle {

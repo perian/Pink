@@ -9,8 +9,8 @@
   }
 
   @media @desktop {
-    padding-top: 65px;
-    padding-bottom: 90px;
+    padding-top: 25px;
+    padding-bottom: 67px;
 
     background-color: @grey;
   }
@@ -18,13 +18,32 @@
 
 .effect__diagram {
   display: inline-block;
-  width: 310px;
-  height: 280px;
+  width: 238px;
+  height: 310px;
+  margin-right: 72px;
+  padding-top: 140px;
 
-  vertical-align: top;
+  font-weight: bold;
+  font-size: 96px;
+  text-align: center;
+  color: @red;
+
+  background-image: url(/img/icon-editor-diagram-fill.svg), url(/img/icon-timer.svg);
+  background-repeat: no-repeat;
+  background-position: 19px 56px, top;
+  background-size: 202px, 100%;
 
   @media @desktop {
-    width: 370px;
+    width: 300px;
+    height: 345px;
+    margin-right: 70px;
+    padding-top: 189px;
+
+    font-size: 120px;
+    line-height: 0;
+
+    background-position: 23px 69px, top;
+    background-size: 253px, 100%;
   }
 }
 
@@ -39,7 +58,7 @@
 
   @media @desktop {
     width: 570px;
-    padding-top: 50px;
+    padding-top: 90px;
 
     .font-size(18px, 30px);
   }
@@ -72,9 +91,12 @@
 
 .effect__research-link {
   color: @link;
+  text-decoration: none;
+
   &:hover,
   &:focus {
     color: @link-hvr;
+    text-decoration: underline;
   }
 
   &:active {

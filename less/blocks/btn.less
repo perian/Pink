@@ -1,9 +1,13 @@
 .btn {
+  display: inline-block;
   width: 280px;
   height: 56px;
   padding: 15px;
 
   font-weight: bold;
+  vertical-align: middle;
+  color: white;
+  text-decoration: none;
 
   background-color: transparent;
   border: 3px solid @btn;
@@ -26,18 +30,6 @@
     color: @btn-down;
 
     background-color: @btn-bg-white;
-  }
-
-  &--red,
-  &--grey {
-    @media @tablet {
-      width: 260px;
-    }
-
-    @media @desktop {
-      width: 184px;
-      margin-top: auto;
-    }
   }
 
   &--red {
@@ -84,6 +76,18 @@
     }
 
     @media @tablet {
+      margin-top: 25px;
+    }
+  }
+
+  &--red,
+  &--grey {
+    @media @tablet {
+      width: 260px;
+    }
+
+    @media @desktop {
+      width: 184px;
       margin-top: auto;
     }
   }
