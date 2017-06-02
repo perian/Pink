@@ -28,17 +28,32 @@
 
 .page-footer__logo {
   width: 150px;
-  height: 42px;
+  height: 52px;
 }
 
 .page-footer__copyright {
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   width: 150px;
   height: 36px;
 
   line-height: 36px;
   color: @text-blue;
   text-decoration: none;
+
+  fill: @red;
+
+  @media @desktop {
+    justify-content: space-between;
+
+    font-size: 18px;
+  }
+  &:hover {
+    fill: @blue;
+  }
+
+  &:active {
+    fill: #e9ebec;
+  }
 }

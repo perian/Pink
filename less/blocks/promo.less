@@ -11,19 +11,34 @@
   background-image: url(/img/iphone-hand-mobile@1x.png), url(/img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center 176px, center top;
+  background-size: 258px, 700px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(/img/iphone-hand-mobile@2x.png), url(/img/bg-back-mobile@2x.jpg);
+  }
 
   @media @tablet {
     height: 728px;
 
-    background-position: 90% 101px,
-    center top;
-    background-size: 476px,cover;
+    background-image: url(/img/iphone-hand-tablet@1x.png), url(/img/bg-back-tablet@1x.jpg);
+    background-position: center bottom, center top;
+    background-size: 695px, cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(/img/iphone-hand-tablet@2x.png), url(/img/bg-back-tablet@2x.jpg);
+    }
   }
 
   @media @desktop {
     height: 853px;
 
-    background-position: 86.170212% 101px, center top;
+    background-image: url(/img/iphone-hand-desktop@1x.png), url(/img/bg-back-desktop@1x.jpg);
+    background-position: right bottom, center top;
+    background-size: 1050px, cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(/img/iphone-hand-desktop@2x.png), url(/img/bg-back-desktop@2x.jpg);
+    }
   }
 
   &--small {
@@ -34,12 +49,28 @@
     background-position: top;
     background-size: cover;
 
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(/img/bg-back-mobile@2x.jpg);
+    }
+
     @media @tablet {
       height: 440px;
+
+      background-image: url(/img/bg-back-tablet@1x.jpg);
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url(/img/bg-back-tablet@2x.jpg);
+      }
     }
 
     @media @desktop {
       height: 394px;
+
+      background-image: url(/img/bg-back-desktop@1x.jpg);
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url(/img/bg-back-desktop@2x.jpg);
+      }
     }
   }
 }
@@ -95,7 +126,7 @@
     width: 400px;
     margin-top: 180px;
 
-    .font-size(50px, 60px);
+    .font-size(50px, 68px);
   }
 
   &--form {
@@ -114,9 +145,21 @@
 .promo__brand-list {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  width: 240px;
   min-height: 55px;
-  margin: 32px 0 25px;
+  margin: 0 auto;
+  margin-top: 34px;
+  margin-bottom: 25px;
+
+  @media @tablet {
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+
+  @media @desktop {
+    margin-top: 70px;
+    margin-bottom: 55px;
+  }
 }
 
 .promo__brand-item {

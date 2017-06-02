@@ -1,6 +1,6 @@
 .social {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 200px;
 
@@ -10,8 +10,7 @@
 }
 
 .social__link {
-  content: " ";
-
+  display: flex;
   width: 52px;
   height: 52px;
 
@@ -19,20 +18,24 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid @grey;
+  border: 2px solid #e9ebec;
   border-radius: 50%;
 
-  &:not(:last-child) {
-    margin-right: 12px;
+  fill: @red;
+
+  &:hover {
+    border-color: @blue;
   }
 
-  &--twitter {
-    background-image: url(/img/icon-twitter.svg);
+  &:active {
+    border-color: @grey;
   }
-  &--facebook {
-    background-image: url(/img/icon-facebook.svg);
+
+  &:active use {
+    fill: @red-faded;
   }
-  &--youtube {
-    background-image: url(/img/icon-youtube.svg);
-  }
+}
+
+.social__link svg {
+  margin: auto;
 }
